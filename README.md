@@ -107,18 +107,111 @@ Q(t+1)=T′Q(t)+TQ(t)′
 
 
 ### PROGRAM 
-/*
+```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: PraveenKumar S
+RegisterNumber:  212222230108
+```
+
+## CODE FOR SR:
+```
+module proj5flipflop(s,r,q,qbar,clk);
+input s,r,clk;
+output reg q,qbar;
+initial q = 0;
+initial qbar = 1;
+always @(posedge clk)
+begin  
+q = s|(q&(~r));
+qbar = r|(qbar&(~s));
+end 
+endmodule
+```
+
+## CODE FOR JK:
+```
+module proj5flipflopJK(J,K,q,qbar,clk);
+input J,K,clk;
+output reg q,qbar;
+initial q = 0;
+initial qbar = 1;
+always @(posedge clk)
+begin  
+q = (J&(~q))|((~K)&q);
+qbar = ((~J)&(qbar))|K&(~qbar);
+end 
+endmodule
+```
+
+## CODE FOR D:
+```
+module proj5Dflipflop(D,clock,Q,Qbar);
+input D,clock;
+output Q,Qbar;
+assign Dbar = ~D;
+wire X,Y;
+nand(X,D,clock);
+nand(Y,Dbar,clock);
+nand(Q,X,Qbar);
+nand(Qbar,Y,Q);
+endmodule
+```
+
+## CODE FOR T:
+```
+module proj5Tflipflop(T,clk,Q,Qbar);
+input T,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=(T&(~Q))|((~T)&Q);
+Qbar=((~T)&Qbar)|(T&(~Qbar));
+end
+endmodule
+```
+
+## RTL LOGIC FOR FLIPFLOPS:
+
+## RTL FOR SR:
+![269824751-d4b7c83e-3abd-4259-a1b1-dc11bde1a0fe](https://github.com/Praveenkumar2004-dev/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119559827/118a59ea-9aa3-4b1c-baf9-728a0fd34db5)
+
+## RTL FOR JK:
+![269824796-9c35ba4a-e0e3-455d-a42e-dcde154c003d](https://github.com/Praveenkumar2004-dev/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119559827/0603843c-d548-4c76-8fa6-cd6801aeceb8)
+
+## RTL FOR D:
+![273101295-f6c81c26-c5f3-4d4d-9f22-6cd3dce28275](https://github.com/Praveenkumar2004-dev/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119559827/3ffd6c16-83d4-4400-beea-649f8f2417e6)
+
+## RTL FOR T:
+![273104467-06c3509c-785e-43c5-9076-e31affdd1bd4](https://github.com/Praveenkumar2004-dev/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119559827/b2278442-ffb6-410f-bfed-61d631273306)
+
+
+## TIMING DIGRAMS FOR FLIP FLOPS:
+## WAVEFPRM FOR SR:
+![269824860-262d4682-4640-4972-abbb-4c8de1670e40](https://github.com/Praveenkumar2004-dev/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119559827/70245ff9-2ffd-4a3a-9b74-931b5ab2e58e)
+
+## WAVEFORM FOR JK:
+![269824874-d2c4cf6e-c31c-4208-9709-a3e717ea62dc](https://github.com/Praveenkumar2004-dev/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119559827/fde2f9c7-c673-4848-b196-230c9dd20fc8)
+
+## WAVEFORM FOR JK_toggle:
+![269828176-31117449-e79b-458e-bbde-4288a64b17f7](https://github.com/Praveenkumar2004-dev/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119559827/553051fc-5e83-43fb-9136-84730fe6850d)
+
+## WAVEFORM FOR D:
+![273101375-579219c2-e5da-4f1e-92f2-344d3e8a9f10](https://github.com/Praveenkumar2004-dev/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119559827/b1007510-6ba6-4e1e-9e02-bec933bcb02a)
+
+## WAVEFORM FOR T:
+![273104461-20ce2ca5-9b82-41ff-8cf5-ca4c56b06764](https://github.com/Praveenkumar2004-dev/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119559827/ead5346c-110c-4848-8bc9-2272f3b8daf6)
+
+## RESULTS:
+Implementation-of-flipflops-using-verilog successfully completed.
 
 
 
 
 
 
-### RTL LOGIC FOR FLIPFLOPS 
 
 
 
@@ -127,14 +220,3 @@ RegisterNumber:
 
 
 
-
-### TIMING DIGRAMS FOR FLIP FLOPS 
-
-
-
-
-
-
-
-
-### RESULTS 
