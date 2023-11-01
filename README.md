@@ -203,11 +203,13 @@ endmodule
 
 
 ## WAVEFORM FOR D:
-![timing ex05](https://github.com/Praveenkumar2004-dev/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119559827/69b15152-396b-4912-98c9-0b7b0caf67c5)
+![ranjan d](https://github.com/Praveenkumar2004-dev/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119559827/b6e33c2e-62a2-423a-976c-44b6e1cd8201)
+
 
 
 ## WAVEFORM FOR T:
-![243260121-35a56b2e-1bc2-42f2-a1de-0a4975201589](https://github.com/Praveenkumar2004-dev/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119559827/49730e32-b175-4fa9-8431-87ab78ea5994)
+![ranjan t](https://github.com/Praveenkumar2004-dev/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119559827/8c06c08a-c545-4252-b7b9-e18aa4a94def)
+
 
 
 ## RESULTS:
